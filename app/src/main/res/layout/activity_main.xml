@@ -5,29 +5,52 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/white"
         tools:context=".MainActivity">
 
-    <ImageView
-            android:id="@+id/userAvatar"
-            android:layout_width="130dp"
-            android:layout_height="130dp"
+    <!--<ImageView-->
+            <!--android:id="@+id/userAvatar"-->
+            <!--android:layout_width="130dp"-->
+            <!--android:layout_height="130dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:tint="@color/rankTextColor"-->
+            <!--android:src="@drawable/ic_launcher_foreground"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent"/>-->
+
+    <com.example.portrayal.DottedCircleView
+            android:id="@+id/customDottedView"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
             android:layout_marginTop="10dp"
-            android:tint="@color/rankTextColor"
-            android:src="@drawable/ic_launcher_foreground"
+            android:visibility="visible"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+    />
+
+    <com.example.portrayal.RoundedImageView
+            android:id="@+id/userAvatar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_arthricia_avatar"
+            app:layout_constraintStart_toStartOf="@id/customDottedView"
+            app:layout_constraintEnd_toEndOf="@id/customDottedView"
+            app:layout_constraintTop_toTopOf="@id/customDottedView"
+            app:layout_constraintBottom_toBottomOf="@id/customDottedView"
+    />
 
     <TextView
             android:id="@+id/username"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_marginTop="10dp"
-            android:text="Marry Jane"
+            android:text="Arthricia"
             android:textStyle="bold"
             android:textSize="23sp"
             android:textColor="?android:textColorPrimary"
-            app:layout_constraintTop_toBottomOf="@+id/userAvatar"
+            app:layout_constraintTop_toBottomOf="@+id/customDottedView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
     />

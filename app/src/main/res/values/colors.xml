@@ -6,6 +6,7 @@
     <color name="defaultColour">#FAFAFA</color>
     <color name="white">#ffffff</color>
     <color name="deep_blue">#2b3648</color>
+    <color name="off_white">#fcfaf2</color>
     <color name="purple">#6c63ff</color>
     <color name="backgroundColor">@color/defaultColour</color>
 
