@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:background="@drawable/user_header_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <com.example.portrayal.DottedCircleView
+            android:id="@+id/customDottedView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+    />
+
+    <com.example.portrayal.RoundedImageView
+            android:id="@+id/userAvatar"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:src="@drawable/ic_arthricia_avatar"
+            app:layout_constraintStart_toStartOf="@id/customDottedView"
+            app:layout_constraintEnd_toEndOf="@id/customDottedView"
+            app:layout_constraintTop_toTopOf="@id/customDottedView"
+            app:layout_constraintBottom_toBottomOf="@id/customDottedView"
+    />
+
+    <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:text="Arthricia"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="?android:textColorPrimary"
+            app:layout_constraintTop_toBottomOf="@+id/customDottedView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+    />
+
+    <TextView
+            android:id="@+id/userRank"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="Voguish"
+            android:textSize="14sp"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/rankTextColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/username"/>
+
+    <include
+            android:id="@+id/profileInformationLayout"
+            layout="@layout/profile_information_layout"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userRank"
+    />
+
+    <View
+            android:id="@+id/emptySpace"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileInformationLayout"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
